@@ -19,3 +19,12 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: 'none';
+  scrollbar-width: none;
+}

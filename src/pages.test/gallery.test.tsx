@@ -1,17 +1,16 @@
 import { render, screen } from '@testing-library/react';
 
-import Index from '@/pages/index';
+import Gallery from '@/pages/gallery';
 
 // The easiest solution to mock `next/router`: https://github.com/vercel/next.js/issues/7479
 // The mock has been moved to `__mocks__` folder to avoid duplication
 
-describe('Index page', () => {
+describe('Gallery page', () => {
   describe('Render method', () => {
-    it('should have h1 tag', () => {
-      render(<Index />);
-
+    it('should have a header with Gallery in it', () => {
+      render(<Gallery />);
       const heading = screen.getByRole('heading', {
-        name: /style/,
+        name: /Gallery/,
       });
 
       expect(heading).toBeInTheDocument();
