@@ -7,13 +7,11 @@ import Gallery from '@/pages/gallery';
 
 describe('Gallery page', () => {
   describe('Render method', () => {
-    it('should have a header with Gallery in it', () => {
+    it('should have images on the gallery page', () => {
       render(<Gallery />);
-      const heading = screen.getByRole('heading', {
-        name: /Gallery/,
-      });
+      const image = screen.getAllByRole('img')[0];
 
-      expect(heading).toBeInTheDocument();
+      expect(image).toBeInTheDocument();
     });
   });
 });
